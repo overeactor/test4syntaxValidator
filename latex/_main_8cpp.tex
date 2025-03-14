@@ -1,0 +1,107 @@
+\doxysection{Main.\+cpp File Reference}
+\hypertarget{_main_8cpp}{}\label{_main_8cpp}\index{Main.cpp@{Main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_main_8cpp_a4b3b8aa187dbfa855fda2e74c31167ef}{is\+Opening\+Bracket}} (char ch)
+\begin{DoxyCompactList}\small\item\em Checks if a character is an opening bracket. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_main_8cpp_ac72790b62b9089fc49ff0db095d0c0ba}{is\+Closing\+Bracket}} (char ch)
+\begin{DoxyCompactList}\small\item\em Checks if a character is a closing bracket. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_main_8cpp_a67294e9c8decb429efaf45b94dec6145}{is\+Matching\+Pair}} (char open, char close)
+\begin{DoxyCompactList}\small\item\em Checks if an opening bracket matches a closing bracket. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_main_8cpp_a8e2172cadcd1583be89290662cdf3b9e}{check\+Brackets}} (const vector$<$ string $>$ \&code\+Lines)
+\begin{DoxyCompactList}\small\item\em Checks the given lines of code for unmatched brackets. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function to read a file and check for bracket errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_main_8cpp_a8e2172cadcd1583be89290662cdf3b9e}\index{Main.cpp@{Main.cpp}!checkBrackets@{checkBrackets}}
+\index{checkBrackets@{checkBrackets}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{checkBrackets()}{checkBrackets()}}
+{\footnotesize\ttfamily \label{_main_8cpp_a8e2172cadcd1583be89290662cdf3b9e} 
+void check\+Brackets (\begin{DoxyParamCaption}\item[{const vector$<$ string $>$ \&}]{code\+Lines}{}\end{DoxyParamCaption})}
+
+
+
+Checks the given lines of code for unmatched brackets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code\+Lines} & Vector of strings representing lines of code. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_main_8cpp_ac72790b62b9089fc49ff0db095d0c0ba}\index{Main.cpp@{Main.cpp}!isClosingBracket@{isClosingBracket}}
+\index{isClosingBracket@{isClosingBracket}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{isClosingBracket()}{isClosingBracket()}}
+{\footnotesize\ttfamily \label{_main_8cpp_ac72790b62b9089fc49ff0db095d0c0ba} 
+bool is\+Closing\+Bracket (\begin{DoxyParamCaption}\item[{char}]{ch}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a character is a closing bracket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & Character to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the character is \textquotesingle{})\textquotesingle{}, \textquotesingle{}\mbox{]}\textquotesingle{}, or \textquotesingle{}\}\textquotesingle{}. 
+\end{DoxyReturn}
+\Hypertarget{_main_8cpp_a67294e9c8decb429efaf45b94dec6145}\index{Main.cpp@{Main.cpp}!isMatchingPair@{isMatchingPair}}
+\index{isMatchingPair@{isMatchingPair}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{isMatchingPair()}{isMatchingPair()}}
+{\footnotesize\ttfamily \label{_main_8cpp_a67294e9c8decb429efaf45b94dec6145} 
+bool is\+Matching\+Pair (\begin{DoxyParamCaption}\item[{char}]{open}{, }\item[{char}]{close}{}\end{DoxyParamCaption})}
+
+
+
+Checks if an opening bracket matches a closing bracket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em open} & Opening bracket character. \\
+\hline
+{\em close} & Closing bracket character. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they form a matching pair. 
+\end{DoxyReturn}
+\Hypertarget{_main_8cpp_a4b3b8aa187dbfa855fda2e74c31167ef}\index{Main.cpp@{Main.cpp}!isOpeningBracket@{isOpeningBracket}}
+\index{isOpeningBracket@{isOpeningBracket}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{isOpeningBracket()}{isOpeningBracket()}}
+{\footnotesize\ttfamily \label{_main_8cpp_a4b3b8aa187dbfa855fda2e74c31167ef} 
+bool is\+Opening\+Bracket (\begin{DoxyParamCaption}\item[{char}]{ch}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a character is an opening bracket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & Character to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the character is \textquotesingle{}(\textquotesingle{}, \textquotesingle{}\mbox{[}\textquotesingle{}, or \textquotesingle{}\{\textquotesingle{}. 
+\end{DoxyReturn}
+\Hypertarget{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{Main.cpp@{Main.cpp}!main@{main}}
+\index{main@{main}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main function to read a file and check for bracket errors. 
+
+\begin{DoxyReturn}{Returns}
+0 on successful execution. 
+\end{DoxyReturn}

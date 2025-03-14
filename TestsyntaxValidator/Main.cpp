@@ -1,3 +1,10 @@
+/**
+ * @file bracket_checker.cpp
+ * @brief Program to check for unmatched brackets in a source file.
+ * @author Alireza Behbahani
+ * @date 2025-03-14
+ */
+
 #include <iostream>
 #include <stack>
 #include <vector>
@@ -6,20 +13,40 @@
 
 using namespace std;
 
+/**
+ * @brief Checks if a character is an opening bracket.
+ * @param ch Character to check.
+ * @return True if the character is '(', '[', or '{'.
+ */
 bool isOpeningBracket(char ch) {
     return ch == '(' || ch == '[' || ch == '{';
 }
 
+/**
+ * @brief Checks if a character is a closing bracket.
+ * @param ch Character to check.
+ * @return True if the character is ')', ']', or '}'.
+ */
 bool isClosingBracket(char ch) {
     return ch == ')' || ch == ']' || ch == '}';
 }
 
+/**
+ * @brief Checks if an opening bracket matches a closing bracket.
+ * @param open Opening bracket character.
+ * @param close Closing bracket character.
+ * @return True if they form a matching pair.
+ */
 bool isMatchingPair(char open, char close) {
     return (open == '(' && close == ')') ||
         (open == '[' && close == ']') ||
         (open == '{' && close == '}');
 }
 
+/**
+ * @brief Checks the given lines of code for unmatched brackets.
+ * @param codeLines Vector of strings representing lines of code.
+ */
 void checkBrackets(const vector<string>& codeLines) {
     stack<pair<char, pair<int, int>>> bracketStack;
     vector<pair<int, int>> errorPositions;
@@ -96,6 +123,10 @@ void checkBrackets(const vector<string>& codeLines) {
     }
 }
 
+/**
+ * @brief Main function to read a file and check for bracket errors.
+ * @return 0 on successful execution.
+ */
 int main() {
     ifstream file("test.txt");
     vector<string> codeLines;
